@@ -3,15 +3,6 @@ require('dotenv').config()
 const axios = require('axios')
 const fs = require('fs')
 
-// utility functions
-const writeToFile = (filename, data) => {
-  fs.writeFile(filename, JSON.stringify(data), (err) => {
-    if (err) {
-      console.log(err)
-    }
-  })
-}
-
 // API
 const apiOptions = {
   headers: {
@@ -22,7 +13,7 @@ const apiOptions = {
 const baseURL = 'http://api.football-data.org/v2'
 
 // main
-const getLeagueId = async (competition) => {
+const getLeagueId = async (competition = 'premier league') => {
   //   get all competitions
   const res = await axios.get(`${baseURL}/competitions/`, apiOptions)
 

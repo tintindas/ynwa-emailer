@@ -1,5 +1,7 @@
 #JSON
-*.json
+teams.json
+matches.json
+competitions.json
 
 # Logs
 logs
