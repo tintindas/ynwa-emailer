@@ -1,7 +1,9 @@
+// imports
 require('dotenv').config()
 const axios = require('axios')
 const fs = require('fs')
 
+// utility functions
 const writeToFile = (filename, data) => {
   fs.writeFile(filename, JSON.stringify(data), (err) => {
     if (err) {
@@ -10,6 +12,7 @@ const writeToFile = (filename, data) => {
   })
 }
 
+// API
 const apiOptions = {
   headers: {
     'X-Auth-Token': process.env.API_TOKEN
@@ -18,33 +21,69 @@ const apiOptions = {
 
 const baseURL = 'http://api.football-data.org/v2'
 
-const get_competitions = async () => {
+// main
+const getLeagueId = async (competition) => {
+  //   get all competitions
   const res = await axios.get(`${baseURL}/competitions/`, apiOptions)
 
+  // array of all competitions
   const competitions = res.data.competitions
 
-  writeToFile('competitions.json', competitions)
+  // find league by name
+  const league = competitions.find(
+    (item) => item.name.toLowerCase() === competition.toLowerCase()
+  )
+  // get league id
+  leagueId = league.id
+
+  return leagueId
 }
 
-const get_teams = async () => {
-  const res = await axios.get(`${baseURL}/competitions/2021/teams`, apiOptions)
+// ;(async () => console.log(await getLeagueId('premier league')))()
 
-  const teams = res.data
-
-  writeToFile('teams.json', teams)
-}
-
-const get_matches = async () => {
+const getTeamId = async (team, leagueId = 2021) => {
+  // get all teams in given league
   const res = await axios.get(
-    `${baseURL}/teams/64/matches?status=SCHEDULED`,
+    `${baseURL}/competitions/${leagueId}/teams`,
     apiOptions
   )
 
-  const matches = res.data
+  //   array of all teams
+  const teams = res.data.teams
 
-  writeToFile('matches.json', matches)
+  //   get team by name
+  const myTeam = teams.find(
+    (item) => item.name.toLowerCase() === team.toLowerCase()
+  )
+
+  //   get team id
+  const teamId = myTeam.id
+
+  return teamId
 }
 
-get_matches()
-// get_teams();
-// get_competitions();
+// ;(async () => console.log(await getTeamId('liverpool fc')))()
+
+const getNextMatch = async (teamId = 64) => {
+  //   get scheduled matches for given team
+  const res = await axios.get(
+    `${baseURL}/teams/${teamId}/matches?status=SCHEDULED`,
+    apiOptions
+  )
+
+  //   get details from next match
+  const { utcDate, homeTeam, awayTeam } = res.data.matches[0]
+
+  //   object with relevant details
+  const match = {
+    utcDate,
+    homeTeam,
+    awayTeam
+  }
+
+  return match
+}
+
+// ;(async () => console.log(await getNextMatch()))()
+
+module.exports = { getLeagueId, getTeamId, getNextMatch }
