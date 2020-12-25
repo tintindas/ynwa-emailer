@@ -6,7 +6,7 @@ const fs = require('fs')
 // API
 const apiOptions = {
   headers: {
-    'X-Auth-Token': process.env.API_TOKEN
+    'X-Auth-Token': process.env.FOOTBALL_API_TOKEN
   }
 }
 
