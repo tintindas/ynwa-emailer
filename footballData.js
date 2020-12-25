@@ -75,6 +75,6 @@ const getNextMatch = async (teamId = 64) => {
   return match
 }
 
-// ;(async () => console.log(await getNextMatch()))()
+;(async () => console.log(await getNextMatch()))()
 
 module.exports = { getLeagueId, getTeamId, getNextMatch }

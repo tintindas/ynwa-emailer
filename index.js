@@ -1,4 +1,4 @@
-const { getNextMatch } = require('./data')
+const { getNextMatch } = require('./footballData')
 const { buildEmail } = require('./buildMail')
 const { mailer } = require('./mailer')
 

@@ -3,6 +3,10 @@ const { calculateTimeRemaining } = require('./date')
 const buildEmail = (match) => {
   const { utcDate, homeTeam, awayTeam } = match
   const { days, hours, minutes, seconds } = calculateTimeRemaining(utcDate)
+  const timerCode = 'u5i1r'
+
+  const homeTeamId = homeTeam.id.toString()
+  const awayTeamId = awayTeam.id.toString()
 
   const text = `
   Next match in ${days} days ${hours} hours ${minutes} and ${seconds}.
@@ -25,7 +29,7 @@ const buildEmail = (match) => {
         <div>
           <p>
             <img
-              src=""
+              src="${crestURL}/${homeTeamId}.svg"
               alt="home crest"
               style="
                 margin: 0 5px;
@@ -34,11 +38,11 @@ const buildEmail = (match) => {
                 vertical-align: middle;
               "
             />
-            <span style="font-weight: bold; padding-bottom: 5px">Home Team</span>
+            <span style="font-weight: bold; padding-bottom: 5px">${homeTeam.name}</span>
             vs.
-            <span style="font-weight: bold; padding-bottom: 5px">Away Team</span>
+            <span style="font-weight: bold; padding-bottom: 5px">${awayTeam.name}</span>
             <img
-              src=""
+              src="${crestURL}/${awayTeamId}.svg"
               alt="away crest"
               style="
                 margin: 0 5px;
@@ -48,25 +52,7 @@ const buildEmail = (match) => {
               "
             />
           </p>
-  
-          <table width="100%" cellspacing="0" cellpadding="0">
-            <tbody>
-              <tr>
-                <td align="center">
-                  <img
-                    src="https://i.countdownmail.com/u5diw.gif"
-                    style="
-                      display: inline-block !important;
-                      width: 90% !important;
-                      max-width: 176px !important;
-                    "
-                    border="0"
-                    alt="countdownmail.com"
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><img src="http://i.countdownmail.com/u5i1r.gif" style="display:inline-block!important;width:90%!important;max-width:492px!important;" border="0" alt="countdownmail.com"/></td></tr></tbody></table> 
         </div>
       </div>
     </body>
@@ -77,3 +63,9 @@ const buildEmail = (match) => {
 }
 
 module.exports = { buildEmail }
+
+buildEmail({
+  utcDate: '2020-12-27T16:30:00Z',
+  homeTeam: { id: 64, name: 'Liverpool FC' },
+  awayTeam: { id: 74, name: 'West Bromwich Albion FC' }
+})
