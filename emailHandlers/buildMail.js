@@ -1,19 +1,17 @@
-const { calculateTimeRemaining } = require('./date')
+const { calculateTimeRemaining } = require('../utils/date')
 
 const buildEmail = (match) => {
   const { utcDate, homeTeam, awayTeam } = match
   const { days, hours, minutes, seconds } = calculateTimeRemaining(utcDate)
-  const timerCode = 'u5i1r'
+  // const timerCode = 'u5i1r'
 
-  const homeTeamId = homeTeam.id.toString()
-  const awayTeamId = awayTeam.id.toString()
+  const homeImagePath = '../images/home.png'
+  const awayImagePath = '../images/away.png'
 
   const text = `
   Next match in ${days} days ${hours} hours ${minutes} and ${seconds}.
   ${homeTeam.name} vs. ${awayTeam.name}
   `
-
-  const crestURL = 'https://crests.football-data.org'
 
   const html = `<!DOCTYPE html>
   <html lang="en">
@@ -29,7 +27,7 @@ const buildEmail = (match) => {
         <div>
           <p>
             <img
-              src="${crestURL}/${homeTeamId}.svg"
+              src="${homeImagePath}"
               alt="home crest"
               style="
                 margin: 0 5px;
@@ -42,7 +40,7 @@ const buildEmail = (match) => {
             vs.
             <span style="font-weight: bold; padding-bottom: 5px">${awayTeam.name}</span>
             <img
-              src="${crestURL}/${awayTeamId}.svg"
+              src="${awayImagePath}"
               alt="away crest"
               style="
                 margin: 0 5px;
