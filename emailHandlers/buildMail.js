@@ -5,8 +5,10 @@ const buildEmail = (match) => {
   const { days, hours, minutes, seconds } = calculateTimeRemaining(utcDate)
   // const timerCode = 'u5i1r'
 
-  const homeImagePath = '../images/home.png'
-  const awayImagePath = '../images/away.png'
+  const homeImagePath =
+    'https://raw.githubusercontent.com/tintindas/ynwa-emailer/main/images/home.png'
+  const awayImagePath =
+    'https://raw.githubusercontent.com/tintindas/ynwa-emailer/main/images/away.png'
 
   const text = `
   Next match in ${days} days ${hours} hours ${minutes} and ${seconds}.
@@ -15,7 +17,7 @@ const buildEmail = (match) => {
 
   const html = `<!DOCTYPE html>
   <html lang="en">
-    <body style = "width: 400px" text-align="center">
+    <body style = "width: 450px" text-align="center">
       <div
         style="
           background-color: rgba(0, 0, 0, 0.005);
@@ -31,8 +33,7 @@ const buildEmail = (match) => {
               alt="home crest"
               style="
                 margin: 0 5px;
-                height: 30px;
-                width: 30px;
+                height: 50px;
                 vertical-align: middle;
               "
             />
@@ -44,8 +45,7 @@ const buildEmail = (match) => {
               alt="away crest"
               style="
                 margin: 0 5px;
-                height: 30px;
-                width: 30px;
+                height: 50px;
                 vertical-align: middle;
               "
             />

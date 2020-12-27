@@ -52,6 +52,6 @@ const updateTimer = async (time = '2020-12-27 16:30:00') => {
   }
 }
 
-;(async () => await updateTimer())()
+// ;(async () => await updateTimer())()
 
 module.exports = { updateTimer }
