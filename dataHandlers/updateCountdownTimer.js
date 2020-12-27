@@ -7,8 +7,8 @@ const timerCode = 'u5i1r'
 const updateTimer = async (time = '2020-12-27 16:30:00') => {
   const updateData = {
     skin_id: 1,
-    name: 'test',
-    time_end: '2020-12-28 18:38:49',
+    name: 'Next Match',
+    time_end: time,
     time_zone: 'UTC',
     font_family: 'Roboto-Bold',
     color_primary: 'FF3A43',
@@ -52,6 +52,6 @@ const updateTimer = async (time = '2020-12-27 16:30:00') => {
   }
 }
 
-// ;(async () => await updateTimer())()
+;(async () => await updateTimer())()
 
 module.exports = { updateTimer }
