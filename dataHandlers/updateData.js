@@ -1,6 +1,6 @@
 const fs = require('fs/promises')
-const { getNextMatch } = require('./dataHandlers/footballData')
-const { updateTimer } = require('./dataHandlers/updateCountdownTimer')
+const { getNextMatch } = require('./footballData')
+const { updateTimer } = require('./updateCountdownTimer')
 
 const updateData = async () => {
   try {

@@ -1,7 +1,7 @@
 const fs = require('fs/promises')
-const { buildEmail } = require('./emailHandlers/buildMail')
-const { mailer } = require('./emailHandlers/mailer')
-const { convertImage } = require('./utils/convertImage')
+const { buildEmail } = require('./buildMail')
+const { mailer } = require('./mailer')
+const { convertImage } = require('../utils/convertImage')
 
 const sendMail = async () => {
   try {
@@ -23,4 +23,4 @@ const sendMail = async () => {
   }
 }
 
-sendMail()
+module.exports = { sendMail }
