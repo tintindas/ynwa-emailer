@@ -1,0 +1,47 @@
+# Update data and timer gif
+name: Update data
+
+# Controls when the action will run. 
+on:
+  # Triggers a workflow at 00:00 UTC every day
+  schedule:
+    - cron: "0 0 * * *"
+
+  # Run workflow from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Set up Node environment
+      - name: Set up Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+      
+      # Run script to update Match data
+      - name: Update match data
+        run: node updateData.js
+        env:
+          FOOTBALL_API_TOKEN: ${{ secrets.FOOTBALL_API_TOKEN }}
+          FROM: ${{ secrets.FROM }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          SERVICE: ${{ secrets.SERVICE }}
+          TIMER_API_TOKEN: ${{ secrets.TIMER_API_TOKEN }}
+          TO: ${{ secrets.TO }}
+          
+      # Commit changes (if any)
+      - name: Commit
+        run: git commit -a -m "Update data and timer gif"
