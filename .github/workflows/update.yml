@@ -44,4 +44,7 @@ jobs:
           
       # Commit changes (if any)
       - name: Commit
-        run: git commit -a -m "Update data and timer gif"
+        run: |
+          git config --global user.email "upamanyu.das.work@gmail.com"
+          git config --global user.name "tintindas"
+          git commit -a -m "Update data and timer gif"
