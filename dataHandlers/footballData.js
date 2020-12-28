@@ -1,7 +1,6 @@
 // imports
 require('dotenv').config()
 const axios = require('axios')
-const fs = require('fs')
 
 // API
 const apiOptions = {

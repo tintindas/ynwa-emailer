@@ -4,7 +4,10 @@ const axios = require('axios')
 const baseURL = 'https://countdownmail.com/api'
 const timerCode = 'u5i1r'
 
-const updateTimer = async (time = '2020-12-27 16:30:00') => {
+const updateTimer = async (time) => {
+  time = time.replace('T', ' ')
+  time = time.replace('Z', '')
+
   const updateData = {
     skin_id: 1,
     name: 'Next Match',
@@ -46,7 +49,7 @@ const updateTimer = async (time = '2020-12-27 16:30:00') => {
       }
     })
 
-    console.log(res.data)
+    // console.log(res.data)
   } catch (err) {
     console.error(err)
   }
