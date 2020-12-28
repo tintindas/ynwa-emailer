@@ -43,8 +43,9 @@ jobs:
           TO: ${{ secrets.TO }}
           
       # Commit changes (if any)
-      - name: Commit
+      - name: Commit and push
         run: |
-          git config --global user.email "upamanyu.das.work@gmail.com"
-          git config --global user.name "tintindas"
-          git commit -a -m "Update data and timer gif"
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git commit -a -m "Update data and timer gif" || echo "No changes to commit"
+          git push || echo "No changes to push"
