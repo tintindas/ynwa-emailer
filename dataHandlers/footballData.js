@@ -54,7 +54,7 @@ const getTeamId = async (team, leagueId = 2021) => {
     //   get team id
     const teamId = myTeam.id
 
-    return teamId
+    return [teamId, teams]
   } catch (err) {
     console.error(err)
   }
