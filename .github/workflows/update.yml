@@ -33,7 +33,9 @@ jobs:
       
       # Run script to update Match data
       - name: Update match data
-        run: node updateData.js
+        run: |
+          node updateData.js
+          node updateReadme.js
         env:
           FOOTBALL_API_TOKEN: ${{ secrets.FOOTBALL_API_TOKEN }}
           FROM: ${{ secrets.FROM }}
