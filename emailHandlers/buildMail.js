@@ -63,9 +63,3 @@ const buildEmail = (match) => {
 }
 
 module.exports = { buildEmail }
-
-buildEmail({
-  utcDate: '2020-12-27T16:30:00Z',
-  homeTeam: { id: 64, name: 'Liverpool FC' },
-  awayTeam: { id: 74, name: 'West Bromwich Albion FC' }
-})

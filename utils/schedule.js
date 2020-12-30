@@ -10,9 +10,12 @@ const schedule = async (timeLimitInMs) => {
     const now = new Date()
 
     const timeRemaining = matchDate - now
+    console.log(`Time Remaining: ${timeRemaining}`)
 
     if (timeRemaining <= timeLimitInMs && timeRemaining >= 0) {
       sendMail()
+    } else {
+      console.log('Not yet time')
     }
   } catch (err) {
     console.error(err)
