@@ -12,7 +12,7 @@ const apiOptions = {
 const baseURL = 'http://api.football-data.org/v2'
 
 // main
-const getLeagueId = async (competition = 'premier league') => {
+const getLeagueId = async (competition) => {
   //get all competitions
   try {
     const res = await axios.get(`${baseURL}/competitions/`, apiOptions)
@@ -49,7 +49,7 @@ const getLeagueId = async (competition = 'premier league') => {
 
 // ;(async () => console.log(await getLeagueId('bl1')))()
 
-const getTeamId = async (team, leagueId = 2021) => {
+const getTeamId = async (team, leagueId) => {
   // get all teams in given league
   try {
     const res = await axios.get(
@@ -91,7 +91,7 @@ const getTeamId = async (team, leagueId = 2021) => {
 
 // ;(async () => console.log(await getTeamId('fcb', 2002)))()
 
-const getNextMatch = async (teamId = 64) => {
+const getNextMatch = async (teamId) => {
   try {
     //   get scheduled matches for given team
     const res = await axios.get(

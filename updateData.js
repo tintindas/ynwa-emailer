@@ -10,7 +10,11 @@ const updateData = async () => {
     let prevMatch = await JSON.parse(data)
     prevMatch = JSON.stringify(prevMatch)
 
-    const match = await getNextMatch()
+    let config = await fs.readFile('config.json')
+    config = JSON.parse(config)
+    const { teamId } = config
+
+    const match = await getNextMatch(teamId)
     const nextMatch = JSON.stringify(match)
 
     if (prevMatch !== nextMatch) {
