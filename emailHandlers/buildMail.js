@@ -17,7 +17,7 @@ const buildEmail = (match) => {
 
   const html = `<!DOCTYPE html>
   <html lang="en">
-    <body style = "width: 450px" text-align="center">
+    <body style = "width: 450px">
       <div
         style="
           background-color: rgba(0, 0, 0, 0.005);
@@ -27,7 +27,7 @@ const buildEmail = (match) => {
         "
       >
         <div>
-          <p>
+          <p style="text-align: center">
             <img
               src="${homeImagePath}"
               alt="home crest"
@@ -38,17 +38,19 @@ const buildEmail = (match) => {
               "
             />
             <span style="font-weight: bold; padding-bottom: 5px">${homeTeam.name}</span>
-            vs.
-            <span style="font-weight: bold; padding-bottom: 5px">${awayTeam.name}</span>
+          </p>
+          <p style="text-align: center">  vs. </p>
+          <p style="text-align: center">
             <img
-              src="${awayImagePath}"
-              alt="away crest"
-              style="
-                margin: 0 5px;
-                height: 50px;
-                vertical-align: middle;
-              "
+            src="${awayImagePath}"
+            alt="away crest"
+            style="
+            margin: 0 5px;
+            height: 50px;
+            vertical-align: middle;
+            "
             />
+            <span style="font-weight: bold; padding-bottom: 5px">${awayTeam.name}</span>
           </p>
           <table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><img src="http://i.countdownmail.com/u5i1r.gif" style="display:inline-block!important;width:90%!important;max-width:492px!important;" border="0" alt="countdownmail.com"/></td></tr></tbody></table> 
         </div>

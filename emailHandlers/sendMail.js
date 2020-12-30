@@ -23,5 +23,5 @@ const sendMail = async () => {
   }
 }
 
-// sendMail()
+sendMail()
 module.exports = { sendMail }
