@@ -1,11 +1,18 @@
+const fs = require('fs/promises')
 
+const updateReadMe = async () => {
+  const data = await fs.readFile('./data/nextMatch.json')
+  const match = JSON.parse(data)
+  const { homeTeam, awayTeam } = match
+
+  const ReadMe = `
   # ynwa-emailer
   Never miss a game again! Get reminders about your favourite team's next fixture right in your inbox.
   
   ## Preview
   <p>
   <img align="center" src="./images/home.png" height=50>  
-  Newcastle United FC vs. Liverpool FC
+  ${homeTeam.name} vs. ${awayTeam.name}
   <img align="center" src="./images/away.png" height=50>  
   </p>
   
@@ -18,4 +25,9 @@
   For setting up this project see [Setup.md](./Setup.md)
   
   ## Contributing
-  Contributions are welcome. Please read [Contributions.md](./Contributions.md) for more information.
+  Contributions are welcome. Please read [Contributions.md](./Contributions.md) for more information.`
+
+  await fs.writeFile('README.md', ReadMe)
+}
+
+updateReadMe()
