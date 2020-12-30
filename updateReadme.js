@@ -12,7 +12,7 @@ const updateReadMe = async () => {
   ## Preview
   <p>
   <img align="center" src="./images/home.png" height=50>  
-  ${homeTeam.name} vs. ${awayTeam.name}
+  <strong>${homeTeam.name}</strong> vs. <strong>${awayTeam.name}</strong>
   <img align="center" src="./images/away.png" height=50>  
   </p>
   
