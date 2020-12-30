@@ -3,7 +3,7 @@ name: Update config
 
 # Controls when the action will run. 
 on:
-	#run workflow on each push to master and from actions tab
+  #run workflow on each push to master and from actions tab
   push:
   workflow_dispatch:
 
