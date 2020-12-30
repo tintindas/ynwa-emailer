@@ -2,26 +2,37 @@ const fs = require('fs/promises')
 const { getLeagueId, getTeamId } = require('./dataHandlers/footballData')
 
 const updateConfig = async () => {
-  const data = await fs.readFile('config.json')
-  let config = await JSON.parse(data)
+  try {
+    const data = await fs.readFile('config.json')
+    let config = await JSON.parse(data)
 
-  const { competition, team } = config
+    const { competition, team } = config
 
-  const leagueId = await getLeagueId(competition)
-  const [teamId, teams] = await getTeamId(team, leagueId)
+    const leagueId = await getLeagueId(competition)
+    if (!leagueId) {
+      return
+    }
 
-  config = {
-    competition,
-    team,
-    leagueId,
-    teamId
+    const [teamId, teams] = await getTeamId(team, leagueId)
+    if (!teamId) {
+      return
+    }
+
+    config = {
+      competition,
+      team,
+      leagueId,
+      teamId
+    }
+
+    const configStr = JSON.stringify(config)
+    await fs.writeFile('config.json', configStr)
+
+    const teamsStr = JSON.stringify(teams)
+    await fs.writeFile('./data/teams.json', teamsStr)
+  } catch (err) {
+    console.error(err)
   }
-
-  const configStr = JSON.stringify(config)
-  await fs.writeFile('config.json', configStr)
-
-  const teamsStr = JSON.stringify(teams)
-  await fs.writeFile('teams.json', teamsStr)
 }
 
 updateConfig()

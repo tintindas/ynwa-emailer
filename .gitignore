@@ -2,9 +2,7 @@
 .vscode
 
 #JSON
-teams.json
 matches.json
-competitions.json
 
 # Logs
 logs
