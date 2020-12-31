@@ -5,7 +5,7 @@
   ## Preview
   <p>
   <img align="center" src="./images/home.png" height=50>  
-  Newcastle United FC vs. Liverpool FC
+  <strong>Southampton FC</strong> vs. <strong>Liverpool FC</strong>
   <img align="center" src="./images/away.png" height=50>  
   </p>
   
