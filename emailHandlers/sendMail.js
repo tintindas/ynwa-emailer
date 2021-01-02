@@ -8,11 +8,6 @@ const sendMail = async () => {
     const data = await fs.readFile('./data/nextMatch.json')
     const match = await JSON.parse(data)
 
-    await Promise.all([
-      convertImage(match.homeTeam.id, 'home'),
-      convertImage(match.awayTeam.id, 'away')
-    ])
-
     const { text, html } = buildEmail(match)
     const subject = `${match.homeTeam.name} vs. ${match.awayTeam.name}`
 
