@@ -1,6 +1,7 @@
 const fs = require('fs/promises')
 const { getNextMatch } = require('./dataHandlers/footballData')
 const { updateTimer } = require('./dataHandlers/updateCountdownTimer')
+const { convertImage } = require('./utils/convertImage')
 
 const updateData = async () => {
   try {
@@ -20,7 +21,11 @@ const updateData = async () => {
     if (prevMatch !== nextMatch) {
       await fs.writeFile(path, nextMatch)
       await updateTimer(match.utcDate)
-      console.log('Updated nextMatch.json and Countdown Timer')
+      await Promise.all([
+        convertImage(match.homeTeam.id, 'home'),
+        convertImage(match.awayTeam.id, 'away')
+      ])
+      console.log('Updated nextMatch.json, images and Countdown Timer')
     } else {
       console.log('No updates yet')
     }
