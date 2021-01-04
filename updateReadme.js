@@ -2,21 +2,27 @@ const fs = require('fs/promises')
 
 const updateReadMe = async () => {
   const data = await fs.readFile('./data/nextMatch.json')
-  const match = JSON.parse(data)
+  const match = await JSON.parse(data)
   const { homeTeam, awayTeam } = match
+
+  let timer = await fs.readFile('./config.js')
+  timer = await JSON.parse(timer)
+  timer = timer.timer
 
   const ReadMe = `
   # ynwa-emailer
   Never miss a game again! Get reminders about your favourite team's next fixture right in your inbox.
   
   ## Preview
-  <p>
+  <p align="center">
   <img align="center" src="./images/home.png" height=50>  
   <strong>${homeTeam.name}</strong> vs. <strong>${awayTeam.name}</strong>
   <img align="center" src="./images/away.png" height=50>  
   </p>
-  
-  <table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><img src="http://i.countdownmail.com/u5i1r.gif" style="display:inline-block!important;width:90%!important;max-width:492px!important;" border="0" alt="countdownmail.com"/></td></tr></tbody></table>
+
+  <p align="center">
+    <img src="http://i.countdownmail.com/${timer}.gif" style="display:inline-block!important;width:90%!important;max-width:492px!important;" border="0" alt="countdownmail.com"/>
+  </p> 
   
   ## For Liverpool Supporters
   Raise a pull request with your email address and I will add you to the mailing list.

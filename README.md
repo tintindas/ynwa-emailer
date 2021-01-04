@@ -1,15 +1,18 @@
+# ynwa-emailer
 
-  # ynwa-emailer
-  Never miss a game again! Get reminders about your favourite team's next fixture right in your inbox.
-  
-  ## Preview
-  <p>
+Never miss a game again! Get reminders about your favourite team's next fixture right in your inbox.
+
+## Preview
+
+  <p align="center">
   <img align="center" src="./images/home.png" height=50>  
   <strong>Southampton FC</strong> vs. <strong>Liverpool FC</strong>
   <img align="center" src="./images/away.png" height=50>  
   </p>
-  
-  <table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><img src="http://i.countdownmail.com/u5i1r.gif" style="display:inline-block!important;width:90%!important;max-width:492px!important;" border="0" alt="countdownmail.com"/></td></tr></tbody></table>
+
+  <p align="center">
+    <img src="http://i.countdownmail.com/u5i1r.gif" style="display:inline-block!important;width:90%!important;max-width:492px!important;" border="0" alt="countdownmail.com"/>
+  </p> 
   
   ## For Liverpool Supporters
   Raise a pull request with your email address and I will add you to the mailing list.
