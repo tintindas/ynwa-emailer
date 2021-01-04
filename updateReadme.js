@@ -25,7 +25,7 @@ const updateReadMe = async () => {
   </p> 
   
   ## For Liverpool Supporters
-  Raise a pull request with your email address and I will add you to the mailing list.
+  Raise an issue with your email address and I will add you to the mailing list.
   
   ## Setup
   For setting up this project see [Setup.md](./Setup.md)
