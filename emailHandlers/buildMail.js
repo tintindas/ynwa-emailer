@@ -3,7 +3,7 @@ const { calculateTimeRemaining } = require('../utils/date')
 const buildEmail = (match) => {
   const { utcDate, homeTeam, awayTeam } = match
   const { days, hours, minutes, seconds } = calculateTimeRemaining(utcDate)
-  // const timerCode = 'u5i1r'
+  const timerCode = 'u5i1r'
 
   const homeImagePath =
     'https://raw.githubusercontent.com/tintindas/ynwa-emailer/main/images/home.png'
@@ -52,7 +52,7 @@ const buildEmail = (match) => {
             />
             <span style="font-weight: bold; padding-bottom: 5px">${awayTeam.name}</span>
           </p>
-          <table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><img src="http://i.countdownmail.com/u5i1r.gif" style="display:inline-block!important;width:90%!important;max-width:492px!important;" border="0" alt="countdownmail.com"/></td></tr></tbody></table> 
+          <table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><img src="http://i.countdownmail.com/${timerCode}.gif" style="display:inline-block!important;width:90%!important;max-width:492px!important;" border="0" alt="countdownmail.com"/></td></tr></tbody></table> 
         </div>
       </div>
     </body>
