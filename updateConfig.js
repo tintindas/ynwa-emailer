@@ -6,7 +6,7 @@ const updateConfig = async () => {
     const data = await fs.readFile('config.json')
     let config = await JSON.parse(data)
 
-    const { competition, team } = config
+    const { competition, team, timer } = config
 
     const leagueId = await getLeagueId(competition)
     if (!leagueId) {
@@ -22,7 +22,8 @@ const updateConfig = async () => {
       competition,
       team,
       leagueId,
-      teamId
+      teamId,
+      timer
     }
 
     const configStr = JSON.stringify(config)
