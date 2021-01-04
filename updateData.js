@@ -2,6 +2,7 @@ const fs = require('fs/promises')
 const { getNextMatch } = require('./dataHandlers/footballData')
 const { updateTimer } = require('./dataHandlers/updateCountdownTimer')
 const { convertImage } = require('./utils/convertImage')
+const jsonFormat = require('json-format')
 
 const updateData = async () => {
   try {
@@ -16,7 +17,7 @@ const updateData = async () => {
     const { teamId } = config
 
     const match = await getNextMatch(teamId)
-    const nextMatch = JSON.stringify(match)
+    const nextMatch = jsonFormat(match)
 
     if (prevMatch !== nextMatch) {
       await fs.writeFile(path, nextMatch)

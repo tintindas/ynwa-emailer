@@ -1,5 +1,6 @@
 const fs = require('fs/promises')
 const { getLeagueId, getTeamId } = require('./dataHandlers/footballData')
+const jsonFormat = require('json-format')
 
 const updateConfig = async () => {
   try {
@@ -26,10 +27,10 @@ const updateConfig = async () => {
       timer
     }
 
-    const configStr = JSON.stringify(config)
+    const configStr = jsonFormat(config)
     await fs.writeFile('config.json', configStr)
 
-    const teamsStr = JSON.stringify(teams)
+    const teamsStr = jsonFormat(teams)
     await fs.writeFile('./data/teams.json', teamsStr)
   } catch (err) {
     console.error(err)
