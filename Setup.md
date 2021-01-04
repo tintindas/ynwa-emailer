@@ -12,24 +12,25 @@ Fork the repository and set up the following environment variables
 
 1. Go to the following link to set up an app password for your google account.
 
-      [Link](https://myaccount.google.com/apppasswords)
-      
+   [Link](https://myaccount.google.com/apppasswords)
+
 1. Set secrets
-      ```
-      FROM: <your username>
-      PASSWORD: <generated password>
-      ```
-     
+   ```
+   FROM: <your username>
+   PASSWORD: <generated password>
+   ```
+
 ## Football Data
 
 1. Go to [Football-Data.Org](https://www.football-data.org/) and create a free account.
-1. Set secret ```FOOTBALL_API_TOKEN: <api token from football-data.org>```
+1. Set secret `FOOTBALL_API_TOKEN: <api token from football-data.org>`
 
 ## Countdown GIF
 
 1. Go to [CountDownMail.com](https://countdownmail.com/) and set up a free account.
 1. Get the api key from the profile section.
-1. Set secret ```TIMER_API_TOKEN: <api token from countdownmail.com>```
+1. Set secret `TIMER_API_TOKEN: <api token from countdownmail.com>`
+1. Create a timer and set timer property in config.json to the generated timer code.
 
 ## Config
 
@@ -37,8 +38,9 @@ In the config.json file set your favourite team and the league they play in.
 
 ```json
 {
-  "competition":"premier league",
-  "team":"liverpool fc"
+  "competition": "premier league",
+  "team": "liverpool fc",
+  "timer": "u51rq"
 }
 ```
 
