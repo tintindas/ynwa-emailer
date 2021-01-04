@@ -1,11 +1,11 @@
 {
-	"utcDate": "2021-01-04T20:00:00Z",
-	"homeTeam": {
-		"id": 340,
-		"name": "Southampton FC"
-	},
-	"awayTeam": {
-		"id": 64,
-		"name": "Liverpool FC"
-	}
+  "utcDate": "2021-01-04T20:00:00Z",
+  "homeTeam": {
+    "id": 340,
+    "name": "Southampton FC"
+  },
+  "awayTeam": {
+    "id": 64,
+    "name": "Liverpool FC"
+  }
 }

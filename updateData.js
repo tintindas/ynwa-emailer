@@ -16,8 +16,13 @@ const updateData = async () => {
     config = JSON.parse(config)
     const { teamId } = config
 
+    const formatConfig = {
+      type: 'space',
+      size: 2
+    }
+
     const match = await getNextMatch(teamId)
-    const nextMatch = jsonFormat(match)
+    const nextMatch = jsonFormat(match, formatConfig)
 
     if (prevMatch !== nextMatch) {
       await fs.writeFile(path, nextMatch)

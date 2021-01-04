@@ -27,10 +27,15 @@ const updateConfig = async () => {
       timer
     }
 
-    const configStr = jsonFormat(config)
+    const formatConfig = {
+      type: 'space',
+      size: 2
+    }
+
+    const configStr = jsonFormat(config, formatConfig)
     await fs.writeFile('config.json', configStr)
 
-    const teamsStr = jsonFormat(teams)
+    const teamsStr = jsonFormat(teams, formatConfig)
     await fs.writeFile('./data/teams.json', teamsStr)
   } catch (err) {
     console.error(err)
