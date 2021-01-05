@@ -5,7 +5,7 @@ const updateReadMe = async () => {
   const match = await JSON.parse(data)
   const { homeTeam, awayTeam } = match
 
-  let timer = await fs.readFile('./config.js')
+  let timer = await fs.readFile('./config.json')
   timer = await JSON.parse(timer)
   timer = timer.timer
 
