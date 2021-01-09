@@ -1,11 +1,11 @@
-# Try to email every day
-name: Email Daily
+# Emails in the hour before the match
+name: Email Hour Before
 
 # Controls when the action will run.
 on:
-  # Triggers a workflow every 23 hours and 30 minutes
+  # Triggers a workflow every 31 minutes
   schedule:
-    - cron: '30 0 * * *'
+    - cron: '*/31 * * * *'
 
   # Run workflow from the Actions tab
   workflow_dispatch:
@@ -41,4 +41,4 @@ jobs:
           SERVICE: ${{ secrets.SERVICE }}
           TIMER_API_TOKEN: ${{ secrets.TIMER_API_TOKEN }}
           TO: ${{ secrets.TO }}
-          TIME_INTERVAL: 24*60*60*1000
+          TIME_INTERVAL: 3600000 #One hour in milliseconds
