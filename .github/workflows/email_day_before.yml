@@ -1,5 +1,5 @@
-# Try to email every day
-name: Email Daily
+# Email reminder day before the match
+name: Email Day Before
 
 # Controls when the action will run.
 on:
