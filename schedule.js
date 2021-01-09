@@ -1,4 +1,4 @@
-const { sendMail } = require('../emailHandlers/sendMail')
+const { sendMail } = require('./emailHandlers/sendMail')
 const fs = require('fs/promises')
 
 const schedule = async () => {
