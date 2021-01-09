@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  email:
     runs-on: ubuntu-latest
     strategy:
       matrix:
