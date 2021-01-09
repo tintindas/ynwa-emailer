@@ -1,11 +1,11 @@
 # Try to email every day
 name: Email Daily
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers a workflow every 23 hours and 30 minutes
   schedule:
-    - cron: "30 0 * * *"
+    - cron: '30 0 * * *'
 
   # Run workflow from the Actions tab
   workflow_dispatch:
@@ -30,10 +30,10 @@ jobs:
       # Install dependencies
       - name: Install dependencies
         run: npm install
-      
+
       # Run script to email
       - name: Email
-        run: node dayBefore.js
+        run: node schedule.js
         env:
           FOOTBALL_API_TOKEN: ${{ secrets.FOOTBALL_API_TOKEN }}
           FROM: ${{ secrets.FROM }}
@@ -41,3 +41,4 @@ jobs:
           SERVICE: ${{ secrets.SERVICE }}
           TIMER_API_TOKEN: ${{ secrets.TIMER_API_TOKEN }}
           TO: ${{ secrets.TO }}
+          TIME_INTERVAL: 24*60*60*1000

@@ -1,7 +1,9 @@
 const { sendMail } = require('../emailHandlers/sendMail')
 const fs = require('fs/promises')
 
-const schedule = async (timeLimitInMs) => {
+const schedule = async () => {
+  const timeLimitInMs = process.env.TIME_INTERVAL
+  console.log(process.env.TIME_INTERVAL)
   try {
     const data = await fs.readFile('./data/nextMatch.json')
     const { utcDate } = await JSON.parse(data)
@@ -22,4 +24,4 @@ const schedule = async (timeLimitInMs) => {
   }
 }
 
-module.exports = { schedule }
+schedule()
