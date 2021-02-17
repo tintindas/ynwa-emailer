@@ -1,11 +1,11 @@
 {
-  "utcDate": "2021-02-16T20:00:00Z",
+  "utcDate": "2021-02-20T17:30:00Z",
   "homeTeam": {
-    "id": 721,
-    "name": "RB Leipzig"
-  },
-  "awayTeam": {
     "id": 64,
     "name": "Liverpool FC"
+  },
+  "awayTeam": {
+    "id": 62,
+    "name": "Everton FC"
   }
 }
