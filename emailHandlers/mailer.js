@@ -13,7 +13,7 @@ const mailer = async (subject, text, html) => {
   try {
     let info = await transporter.sendMail({
       from: process.env.FROM,
-      to: process.env.TO,
+      to: [process.env.TO, 'debargho.basak1999@gmail.com']
       subject: subject,
       text: text,
       html: html
