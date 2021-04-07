@@ -1,11 +1,11 @@
 {
-  "utcDate": "2021-04-06T19:00:00Z",
+  "utcDate": "2021-04-10T14:00:00Z",
   "homeTeam": {
-    "id": 86,
-    "name": "Real Madrid CF"
-  },
-  "awayTeam": {
     "id": 64,
     "name": "Liverpool FC"
+  },
+  "awayTeam": {
+    "id": 58,
+    "name": "Aston Villa FC"
   }
 }
