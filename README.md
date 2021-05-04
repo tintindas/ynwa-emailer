@@ -20,4 +20,4 @@
   For setting up this project see [Setup.md](./Setup.md)
   
   ## Contributing
-  Contributions are welcome. Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for more information.
+  Contributions are welcome. Please read [Contributions.md](./Contributions.md) for more information.
