@@ -5,7 +5,7 @@
   ## Preview
   <p align="center">
   <img align="center" src="./images/home.png" height=50>  
-  <strong>West Bromwich Albion FC</strong> vs. <strong>Liverpool FC</strong>
+  <strong>Burnley FC</strong> vs. <strong>Liverpool FC</strong>
   <img align="center" src="./images/away.png" height=50>  
   </p>
 
