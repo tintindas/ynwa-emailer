@@ -1,11 +1,11 @@
 {
-  "utcDate": "2021-08-14T16:30:00Z",
+  "utcDate": "2021-08-21T11:30:00Z",
   "homeTeam": {
-    "id": 68,
-    "name": "Norwich City FC"
-  },
-  "awayTeam": {
     "id": 64,
     "name": "Liverpool FC"
+  },
+  "awayTeam": {
+    "id": 328,
+    "name": "Burnley FC"
   }
 }
