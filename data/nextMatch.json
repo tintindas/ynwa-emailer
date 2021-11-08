@@ -1,11 +1,11 @@
 {
-  "utcDate": "2021-11-07T16:30:00Z",
+  "utcDate": "2021-11-20T17:30:00Z",
   "homeTeam": {
-    "id": 563,
-    "name": "West Ham United FC"
-  },
-  "awayTeam": {
     "id": 64,
     "name": "Liverpool FC"
+  },
+  "awayTeam": {
+    "id": 57,
+    "name": "Arsenal FC"
   }
 }
