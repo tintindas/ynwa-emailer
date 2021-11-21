@@ -1,11 +1,11 @@
 {
-  "utcDate": "2021-11-20T17:30:00Z",
+  "utcDate": "2021-11-24T20:00:00Z",
   "homeTeam": {
     "id": 64,
     "name": "Liverpool FC"
   },
   "awayTeam": {
-    "id": 57,
-    "name": "Arsenal FC"
+    "id": 503,
+    "name": "FC Porto"
   }
 }
