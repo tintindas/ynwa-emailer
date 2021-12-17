@@ -1,11 +1,11 @@
 {
-  "utcDate": "2021-12-16T20:00:00Z",
+  "utcDate": "2021-12-19T16:30:00Z",
   "homeTeam": {
-    "id": 64,
-    "name": "Liverpool FC"
+    "id": 73,
+    "name": "Tottenham Hotspur FC"
   },
   "awayTeam": {
-    "id": 67,
-    "name": "Newcastle United FC"
+    "id": 64,
+    "name": "Liverpool FC"
   }
 }
