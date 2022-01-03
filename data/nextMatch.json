@@ -1,11 +1,11 @@
 {
-  "utcDate": "2022-01-02T16:30:00Z",
+  "utcDate": "2022-01-16T14:00:00Z",
   "homeTeam": {
-    "id": 61,
-    "name": "Chelsea FC"
-  },
-  "awayTeam": {
     "id": 64,
     "name": "Liverpool FC"
+  },
+  "awayTeam": {
+    "id": 402,
+    "name": "Brentford FC"
   }
 }
