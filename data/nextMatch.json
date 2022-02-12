@@ -1,11 +1,11 @@
 {
-  "utcDate": "2022-02-10T19:45:00Z",
+  "utcDate": "2022-02-13T14:00:00Z",
   "homeTeam": {
-    "id": 64,
-    "name": "Liverpool FC"
+    "id": 328,
+    "name": "Burnley FC"
   },
   "awayTeam": {
-    "id": 338,
-    "name": "Leicester City FC"
+    "id": 64,
+    "name": "Liverpool FC"
   }
 }
