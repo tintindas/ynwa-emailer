@@ -1,11 +1,11 @@
 {
-  "utcDate": "2022-03-08T20:00:00Z",
+  "utcDate": "2022-03-12T12:30:00Z",
   "homeTeam": {
-    "id": 64,
-    "name": "Liverpool FC"
+    "id": 397,
+    "name": "Brighton & Hove Albion FC"
   },
   "awayTeam": {
-    "id": 108,
-    "name": "FC Internazionale Milano"
+    "id": 64,
+    "name": "Liverpool FC"
   }
 }
