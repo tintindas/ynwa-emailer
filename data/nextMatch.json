@@ -1,11 +1,11 @@
 {
-  "utcDate": "2022-04-02T11:30:00Z",
+  "utcDate": "2022-04-05T19:00:00Z",
   "homeTeam": {
-    "id": 64,
-    "name": "Liverpool FC"
+    "id": 1903,
+    "name": "Sport Lisboa e Benfica"
   },
   "awayTeam": {
-    "id": 346,
-    "name": "Watford FC"
+    "id": 64,
+    "name": "Liverpool FC"
   }
 }
