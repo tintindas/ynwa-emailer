@@ -1,11 +1,11 @@
 {
-  "utcDate": "2022-04-10T15:30:00Z",
+  "utcDate": "2022-04-13T19:00:00Z",
   "homeTeam": {
-    "id": 65,
-    "name": "Manchester City FC"
-  },
-  "awayTeam": {
     "id": 64,
     "name": "Liverpool FC"
+  },
+  "awayTeam": {
+    "id": 1903,
+    "name": "Sport Lisboa e Benfica"
   }
 }
