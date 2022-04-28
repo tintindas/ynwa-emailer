@@ -1,11 +1,11 @@
 {
-  "utcDate": "2022-04-27T19:00:00Z",
+  "utcDate": "2022-04-30T11:30:00Z",
   "homeTeam": {
-    "id": 64,
-    "name": "Liverpool FC"
+    "id": 67,
+    "name": "Newcastle United FC"
   },
   "awayTeam": {
-    "id": 94,
-    "name": "Villarreal CF"
+    "id": 64,
+    "name": "Liverpool FC"
   }
 }
