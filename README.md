@@ -5,7 +5,7 @@
   ## Preview
   <p align="center">
   <img align="center" src="./images/home.png" height=50>  
-  <strong>Liverpool FC</strong> vs. <strong>Tottenham Hotspur FC</strong>
+  <strong>Aston Villa FC</strong> vs. <strong>Liverpool FC</strong>
   <img align="center" src="./images/away.png" height=50>  
   </p>
 
