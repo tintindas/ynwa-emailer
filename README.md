@@ -5,7 +5,7 @@
   ## Preview
   <p align="center">
   <img align="center" src="./images/home.png" height=50>  
-  <strong>Liverpool FC</strong> vs. <strong>Wolverhampton Wanderers FC</strong>
+  <strong>Liverpool FC</strong> vs. <strong>Real Madrid CF</strong>
   <img align="center" src="./images/away.png" height=50>  
   </p>
 
