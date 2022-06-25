@@ -1,11 +1,11 @@
 {
-  "utcDate": "2022-05-28T19:00:00Z",
+  "utcDate": "2022-08-06T11:30:00Z",
   "homeTeam": {
-    "id": 64,
-    "name": "Liverpool FC"
+    "id": 63,
+    "name": "Fulham FC"
   },
   "awayTeam": {
-    "id": 86,
-    "name": "Real Madrid CF"
+    "id": 64,
+    "name": "Liverpool FC"
   }
 }
