@@ -5,7 +5,7 @@
   ## Preview
   <p align="center">
   <img align="center" src="./images/home.png" height=50>  
-  <strong>Everton FC</strong> vs. <strong>Liverpool FC</strong>
+  <strong>SSC Napoli</strong> vs. <strong>Liverpool FC</strong>
   <img align="center" src="./images/away.png" height=50>  
   </p>
 
