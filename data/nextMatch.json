@@ -1,11 +1,11 @@
 {
-  "utcDate": "2022-09-10T14:00:00Z",
+  "utcDate": "2022-09-13T19:00:00Z",
   "homeTeam": {
     "id": 64,
     "name": "Liverpool FC"
   },
   "awayTeam": {
-    "id": 76,
-    "name": "Wolverhampton Wanderers FC"
+    "id": 678,
+    "name": "AFC Ajax"
   }
 }
