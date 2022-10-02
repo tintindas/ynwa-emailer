@@ -5,7 +5,7 @@
   ## Preview
   <p align="center">
   <img align="center" src="./images/home.png" height=50>  
-  <strong>Liverpool FC</strong> vs. <strong>Brighton & Hove Albion FC</strong>
+  <strong>Liverpool FC</strong> vs. <strong>Rangers FC</strong>
   <img align="center" src="./images/away.png" height=50>  
   </p>
 
