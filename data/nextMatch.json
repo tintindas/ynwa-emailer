@@ -1,11 +1,11 @@
 {
-  "utcDate": "2022-10-04T19:00:00Z",
+  "utcDate": "2022-10-09T15:30:00Z",
   "homeTeam": {
-    "id": 64,
-    "name": "Liverpool FC"
+    "id": 57,
+    "name": "Arsenal FC"
   },
   "awayTeam": {
-    "id": 5376,
-    "name": "Rangers FC"
+    "id": 64,
+    "name": "Liverpool FC"
   }
 }
