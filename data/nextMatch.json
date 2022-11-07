@@ -1,11 +1,11 @@
 {
-  "utcDate": "2022-11-06T16:30:00Z",
+  "utcDate": "2022-11-12T15:00:00Z",
   "homeTeam": {
-    "id": 73,
-    "name": "Tottenham Hotspur FC"
-  },
-  "awayTeam": {
     "id": 64,
     "name": "Liverpool FC"
+  },
+  "awayTeam": {
+    "id": 340,
+    "name": "Southampton FC"
   }
 }
