@@ -1,11 +1,11 @@
 {
-  "utcDate": "2022-12-30T20:00:00Z",
+  "utcDate": "2023-01-02T17:30:00Z",
   "homeTeam": {
-    "id": 64,
-    "name": "Liverpool FC"
+    "id": 402,
+    "name": "Brentford FC"
   },
   "awayTeam": {
-    "id": 338,
-    "name": "Leicester City FC"
+    "id": 64,
+    "name": "Liverpool FC"
   }
 }
