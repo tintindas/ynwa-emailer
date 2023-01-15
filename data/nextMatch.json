@@ -1,11 +1,11 @@
 {
-  "utcDate": "2023-01-14T15:00:00Z",
+  "utcDate": "2023-01-21T12:30:00Z",
   "homeTeam": {
-    "id": 397,
-    "name": "Brighton & Hove Albion FC"
-  },
-  "awayTeam": {
     "id": 64,
     "name": "Liverpool FC"
+  },
+  "awayTeam": {
+    "id": 61,
+    "name": "Chelsea FC"
   }
 }
