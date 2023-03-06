@@ -1,11 +1,11 @@
 {
-  "utcDate": "2023-03-05T16:30:00Z",
+  "utcDate": "2023-03-11T12:30:00Z",
   "homeTeam": {
-    "id": 64,
-    "name": "Liverpool FC"
+    "id": 1044,
+    "name": "AFC Bournemouth"
   },
   "awayTeam": {
-    "id": 66,
-    "name": "Manchester United FC"
+    "id": 64,
+    "name": "Liverpool FC"
   }
 }
