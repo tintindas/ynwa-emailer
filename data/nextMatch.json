@@ -1,11 +1,11 @@
 {
-  "utcDate": "2023-04-30T15:30:00Z",
+  "utcDate": "2023-05-03T19:00:00Z",
   "homeTeam": {
     "id": 64,
     "name": "Liverpool FC"
   },
   "awayTeam": {
-    "id": 73,
-    "name": "Tottenham Hotspur FC"
+    "id": 63,
+    "name": "Fulham FC"
   }
 }
